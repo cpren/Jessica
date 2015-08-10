@@ -63,13 +63,8 @@
           </block>
         </statement>
         <next>
-          <block type="variables_set" id="30" inline="true">
-            <field name="VAR">size</field>
-            <value name="VALUE">
-              <block type="math_number" id="31">
-                <field name="NUM">6</field>
-              </block>
-            </value>
+          <block type="variables_set" id="35" inline="true">
+            <field name="VAR">light</field>
             <next>
               <block type="controls_repeat" id="15" inline="true">
                 <value name="TIMES">
@@ -82,7 +77,7 @@
                     <field name="ACTION">ON</field>
                     <value name="LED">
                       <block type="variables_get" id="18">
-                        <field name="VAR">size</field>
+                        <field name="VAR">light</field>
                       </block>
                     </value>
                     <next>
@@ -97,18 +92,18 @@
                             <field name="ACTION">OFF</field>
                             <value name="LED">
                               <block type="variables_get" id="22">
-                                <field name="VAR">size</field>
+                                <field name="VAR">light</field>
                               </block>
                             </value>
                             <next>
                               <block type="variables_set" id="23" inline="true">
-                                <field name="VAR">size</field>
+                                <field name="VAR">light</field>
                                 <value name="VALUE">
                                   <block type="math_arithmetic" id="24" inline="true">
                                     <field name="OP">MINUS</field>
                                     <value name="A">
                                       <block type="variables_get" id="25">
-                                        <field name="VAR">size</field>
+                                        <field name="VAR">light</field>
                                       </block>
                                     </value>
                                     <value name="B">
