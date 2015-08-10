@@ -1,38 +1,68 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="29" inline="true" x="2" y="7">
-    <value name="TIMES">
-      <block type="math_number" id="36">
-        <field name="NUM">4</field>
+  <block type="variables_set" id="45" inline="true" x="25" y="15">
+    <field name="VAR">size</field>
+    <value name="VALUE">
+      <block type="math_number" id="52">
+        <field name="NUM">2000</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="movement_forward" id="37">
-        <next>
-          <block type="robot_delay" id="38" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="39">
-                <field name="NUM">2000</field>
-              </block>
-            </value>
+    <next>
+      <block type="controls_repeat" id="29" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="36">
+            <field name="NUM">8</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="37">
             <next>
-              <block type="movement_right" id="40">
+              <block type="robot_delay" id="38" inline="true">
+                <value name="DELAY">
+                  <block type="variables_get" id="56">
+                    <field name="VAR">size</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="42" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="43">
-                        <field name="NUM">1350</field>
+                  <block type="movement_right" id="40">
+                    <next>
+                      <block type="robot_delay" id="42" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="43">
+                            <field name="NUM">1350</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="99" inline="true">
+                            <field name="VAR">size</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="106" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="110">
+                                    <field name="VAR">size</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="117">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
-                    </value>
+                    </next>
                   </block>
                 </next>
               </block>
             </next>
           </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="19"></block>
         </next>
       </block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="19"></block>
     </next>
   </block>
 </xml>
