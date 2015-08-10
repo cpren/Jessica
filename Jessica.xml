@@ -54,35 +54,6 @@
                             </value>
                           </block>
                         </value>
-                        <next>
-                          <block type="led_select" id="129" inline="true">
-                            <field name="ACTION">ON</field>
-                            <value name="LED">
-                              <block type="math_number" id="160">
-                                <field name="NUM">6</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="robot_delay" id="131" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="153">
-                                    <field name="NUM">500</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="led_select" id="140" inline="true">
-                                    <field name="ACTION">ON</field>
-                                    <value name="LED">
-                                      <block type="math_number" id="161">
-                                        <field name="NUM">6</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
                       </block>
                     </next>
                   </block>
@@ -91,6 +62,44 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="controls_repeat" id="168" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="169">
+                <field name="NUM">6</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="led_select" id="129" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="160">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="robot_delay" id="131" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="153">
+                        <field name="NUM">500</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="140" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="161">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
       </block>
     </next>
   </block>
