@@ -62,6 +62,74 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="variables_set" id="30" inline="true">
+            <field name="VAR">size</field>
+            <value name="VALUE">
+              <block type="math_number" id="31">
+                <field name="NUM">6</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_repeat" id="15" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="16">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="led_select" id="17" inline="true">
+                    <field name="ACTION">ON</field>
+                    <value name="LED">
+                      <block type="variables_get" id="18">
+                        <field name="VAR">size</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="robot_delay" id="19" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="20">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="led_select" id="21" inline="true">
+                            <field name="ACTION">OFF</field>
+                            <value name="LED">
+                              <block type="variables_get" id="22">
+                                <field name="VAR">size</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="23" inline="true">
+                                <field name="VAR">size</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="24" inline="true">
+                                    <field name="OP">MINUS</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="25">
+                                        <field name="VAR">size</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="26">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
