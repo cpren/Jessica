@@ -10,7 +10,7 @@
       <block type="controls_repeat" id="29" inline="true">
         <value name="TIMES">
           <block type="math_number" id="36">
-            <field name="NUM">8</field>
+            <field name="NUM">6</field>
           </block>
         </value>
         <statement name="DO">
@@ -62,6 +62,9 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="movement_stop" id="196"></block>
+        </next>
       </block>
     </next>
   </block>
