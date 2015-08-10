@@ -31,45 +31,8 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="movement_forward" id="13" x="434" y="57">
     <next>
-      <block type="robot_delay" id="14" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="15">
-            <field name="NUM">2000</field>
-          </block>
-        </value>
-        <next>
-          <block type="movement_right" id="16">
-            <next>
-              <block type="robot_delay" id="17" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="18">
-                    <field name="NUM">1350</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_forward" id="20">
-                    <next>
-                      <block type="robot_delay" id="21" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="22">
-                            <field name="NUM">2000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_stop" id="19"></block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
+      <block type="movement_stop" id="19"></block>
     </next>
   </block>
 </xml>
