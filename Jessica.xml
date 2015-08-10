@@ -54,6 +54,64 @@
                             </value>
                           </block>
                         </value>
+                        <next>
+                          <block type="controls_repeat" id="3" inline="true">
+                            <value name="TIMES">
+                              <block type="math_number" id="237">
+                                <field name="NUM">6</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="led_select" id="181" inline="true">
+                                <field name="ACTION">ON</field>
+                                <value name="LED">
+                                  <block type="variables_get" id="266">
+                                    <field name="VAR">size</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="robot_delay" id="192" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="195">
+                                        <field name="NUM">500</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="led_select" id="190" inline="true">
+                                        <field name="ACTION">OFF</field>
+                                        <value name="LED">
+                                          <block type="variables_get" id="270">
+                                            <field name="VAR">size</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="241" inline="true">
+                                            <field name="VAR">size</field>
+                                            <value name="VALUE">
+                                              <block type="math_arithmetic" id="248" inline="true">
+                                                <field name="OP">MINUS</field>
+                                                <value name="A">
+                                                  <block type="math_number" id="262">
+                                                    <field name="NUM">6</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="255">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -62,64 +120,6 @@
             </next>
           </block>
         </statement>
-        <next>
-          <block type="controls_repeat" id="3" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="237">
-                <field name="NUM">6</field>
-              </block>
-            </value>
-            <statement name="DO">
-              <block type="led_select" id="181" inline="true">
-                <field name="ACTION">ON</field>
-                <value name="LED">
-                  <block type="variables_get" id="266">
-                    <field name="VAR">size</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="robot_delay" id="192" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="195">
-                        <field name="NUM">500</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="led_select" id="190" inline="true">
-                        <field name="ACTION">OFF</field>
-                        <value name="LED">
-                          <block type="variables_get" id="270">
-                            <field name="VAR">size</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="variables_set" id="241" inline="true">
-                            <field name="VAR">size</field>
-                            <value name="VALUE">
-                              <block type="math_arithmetic" id="248" inline="true">
-                                <field name="OP">MINUS</field>
-                                <value name="A">
-                                  <block type="math_number" id="262">
-                                    <field name="NUM">6</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="255">
-                                    <field name="NUM">1</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </statement>
-          </block>
-        </next>
       </block>
     </next>
   </block>
